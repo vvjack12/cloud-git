@@ -1,17 +1,19 @@
 <html>
     <head>
-        <script src = "https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzlpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-            crossorigin= "anonymous"></script>
+        <script src = "https://code.jquery.com/jquery-1.12.4.min.js">
+        </script>
     </head>
     <script>
-        $.get(https://script.googleusercontent.com/macros/echo?user_content_key=Vcadtl0KQfAD2weU-lc0Dq8Oz1n4t8asupJLRM5DkEfsp5m_DA4Bvq1c6SrUrwVx7B63urG31snVEgQ0ubvPekoQ7NtCwZYTm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnOyYfe4YohKFyEqwiVKNM7ZXN2GXDPWj4ppV0nPUC1Azcn-Jr0AZCppdfsDUyEmfgCJKrQ4cslQRei_UWXDCYpyADgkR1nXgwg&lib=Mqo53aQu3_3MAeP0XW6iKL8sAxIjQUtdv)
-            function (para1) {
-                console.log(para1);
-                $("#content").html(para1);
+        $.post('https://script.google.com/macros/s/AKfycbyD_ILH-z5ylDy1jCFfbK_hsMon9Eq_BHFFuaXD1Jhk2BEwS-s/exec',
+        {
+            row:1,
+            col:1
+        },
+        function (e) {
+            console.log(e);
+            $("#content").html(e);
                 
-            }
-        );
+        });
     </script>
     <body>
         <label id="content"></label>
